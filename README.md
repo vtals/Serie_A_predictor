@@ -82,6 +82,8 @@ The pipeline includes:
 Contributions, issues, and feature requests are welcome!  
 Feel free to open a pull request to improve the model, dataset, or visualizations.
 
+P.S thx to @Erik-Cupsa for the inspiration
+
 ---
 
 ## 📜 License
