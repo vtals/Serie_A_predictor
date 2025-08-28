@@ -5,41 +5,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
 
-'''idee per future implementazioni:
-visualizzazioni:
--heatmap delle correlazioni tra le variabili'''
-
-
-'''
-Date = data della partita
-Time = ora della partita
-Comp = competizione
-Round = giornata
-Day = giorno della settimana
-Venue = in casa o fuor casa
-Result = risultato finale
-GF = goal fatti
-GA = goal subiti
-Opponent = avversario
-xG = expected goals
-xGA = expected goals against
-Poss = possesso palla
-Attendance = numero di spettatori
-Captain = capitano della squadra
-Formation = formazione iniziale
-Opp formation = formazione iniziale avversario
-Referee = arbitro
-Match Report = link al report della partita
-Notes = note sulla partita
-Sh = tiri totali
-SoT = tiri in porta
-Dist = distanza dalla porta media per tiro (yards)
-FK = calci di punizione
-PK = calci di rigore segnati
-PKatt = rigori tentati
-Season = stagione
-Team = squadra
-'''
 
 file_name = 'matches_serie_A.csv'
 df = pd.read_csv(file_name)
@@ -148,7 +113,7 @@ def split_summary_by_season(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series, 
     # Create a separate CSV file for each season
     for s in season:
         summary_per_season = df[df['Season'] == s]
-        summary_per_season.to_csv(f'Season data/summary_{s}.csv', index=False)
+        summary_per_season.to_csv(f'Seasons_data/summary_{s}.csv', index=False)
 
     # Create train and test sets, using the last season as the test set
     test_season = df[df['Season'] == season[-1]]
